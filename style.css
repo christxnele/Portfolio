@@ -374,8 +374,12 @@ section {
   border: rgb(53, 53, 53) 0.2rem solid;
   border-color: rgb(116, 138, 109);
   text-align: center;
+
 }
 
+.details-container h2 {
+  margin-bottom: 1rem;
+}
 .section-container {
   gap: 4rem;
   height: 80%;
