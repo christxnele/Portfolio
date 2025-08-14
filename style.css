@@ -64,7 +64,7 @@ a:hover {
 }
 
 .logo:hover {
-  cursor: pointer;
+  cursor: default;
 }
 
 
