@@ -30,27 +30,25 @@
   section{
     margin: 0 5%;
   }
+  
+  /* OVERRIDE THE FIXED WIDTHS FOR TABLET/MOBILE */
+  .section__text {
+    width: 100% !important; /* Remove fixed width */
+    min-width: auto !important; /* Remove minimum width */
+    max-width: 500px; /* Add reasonable max width */
+    margin: 0 auto; /* Center the text container */
+  }
+  
   .section__pic-container {
     width: 275px;
     height: 275px;
-    margin: 0 auto 2rem;
+    margin: 0 auto 2rem !important; /* Center and remove right margin */
     border: 2.5px solid rgb(64, 64, 64);
+    flex-shrink: initial; /* Reset flex-shrink for mobile */
   }
+  
   .about-containers {
     margin-top: 0;
-  }
-  
-  /* CENTER ALL CONTENT */
-  #about, #experience, #projects, #contact {
-    text-align: center;
-  }
-  
-  .about-details-container {
-    align-items: center;
-  }
-  
-  .experience-details-container {
-    align-items: center;
   }
 }
 
@@ -62,6 +60,35 @@
         height: 83vh;
         margin-bottom: 0;
     }
+    
+    /* MOBILE RESPONSIVE TEXT CONTAINER */
+    .section__text {
+        width: 100% !important;
+        min-width: auto !important;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    
+    .section__text__p2 {
+        font-size: 1.25rem;
+        white-space: normal !important; /* Allow text wrapping on mobile */
+        overflow: visible !important;
+    }
+    
+    .section__pic-container{
+        width: 46vw;
+        height: 46vw;
+        max-width: 250px;
+        max-height: 250px;
+        min-width: 200px;
+        min-height: 200px;
+        justify-content: center;
+        border: 2px solid rgb(64, 64, 64);
+        margin: 0 auto 2rem !important; /* Center with auto margins */
+        flex-shrink: initial; /* Reset for mobile */
+    }
+    
+    /* Rest of your existing 600px media query rules... */
     article {
         font-size: 1rem;
     }
@@ -89,51 +116,13 @@
         gap: 0.5rem;
         text-align: center;
     }
-    .section__pic-container{
-        width: 46vw;
-        height: 46vw;
-        max-width: 250px;
-        max-height: 250px;
-        min-width: 200px;
-        min-height: 200px;
-        justify-content: center;
-        border: 2px solid rgb(64, 64, 64);
-    }
-    .section__text__p2 {
-        font-size: 1.25rem;
-    }
     .title {
         font-size: 2rem;
     }
     .text-container{
         text-align: center;
     }
-    
-    /* FORCE CENTER ALL SECTIONS */
-    #about, #experience, #projects, #contact {
-        text-align: center !important;
-    }
-    
-    /* CENTER FLEX CONTAINERS */
-    .about-containers {
-        justify-content: center !important;
-    }
-    
-    .experience-details-container {
-        align-items: center !important;
-    }
-    
-    .article-container {
-        justify-content: center !important;
-    }
-    
-    /* CENTER DETAILS CONTAINERS */
-    .details-container {
-        margin-left: auto !important;
-        margin-right: auto !important;
-    }
 }
-
 @media (max-width: 768px) {
   .section__text {
     min-width: auto;
