@@ -1,12 +1,12 @@
 @media screen and (max-width: 1400px) {
     #profile {
         height: 83vh;
-        margin-bottom: 6re,;
+        margin-bottom: 6rem;
     }
     .about-containers{
         flex-wrap: wrap;
     }
-  }
+}
 
 @media screen and (max-width: 1200px) {
   #desktop-nav {
@@ -34,9 +34,23 @@
     width: 275px;
     height: 275px;
     margin: 0 auto 2rem;
+    border: 2.5px solid rgb(64, 64, 64);
   }
   .about-containers {
     margin-top: 0;
+  }
+  
+  /* CENTER ALL CONTENT */
+  #about, #experience, #projects, #contact {
+    text-align: center;
+  }
+  
+  .about-details-container {
+    align-items: center;
+  }
+  
+  .experience-details-container {
+    align-items: center;
   }
 }
 
@@ -47,7 +61,6 @@
     #profile {
         height: 83vh;
         margin-bottom: 0;
-
     }
     article {
         font-size: 1rem;
@@ -56,7 +69,7 @@
         height: fit-content;
         margin-bottom: 2rem;
     }
-    .about-containers, .contact-info-upper-container, btn-container {
+    .about-containers, .contact-info-upper-container, .btn-container {
         flex-wrap: wrap;
     }
     .contact-info-container {
@@ -77,9 +90,14 @@
         text-align: center;
     }
     .section__pic-container{
-        width: auto;
+        width: 46vw;
         height: 46vw;
+        max-width: 250px;
+        max-height: 250px;
+        min-width: 200px;
+        min-height: 200px;
         justify-content: center;
+        border: 2px solid rgb(64, 64, 64);
     }
     .section__text__p2 {
         font-size: 1.25rem;
@@ -88,6 +106,58 @@
         font-size: 2rem;
     }
     .text-container{
-        text-align: justify;
+        text-align: center;
+    }
+    
+    /* FORCE CENTER ALL SECTIONS */
+    #about, #experience, #projects, #contact {
+        text-align: center !important;
+    }
+    
+    /* CENTER FLEX CONTAINERS */
+    .about-containers {
+        justify-content: center !important;
+    }
+    
+    .experience-details-container {
+        align-items: center !important;
+    }
+    
+    .article-container {
+        justify-content: center !important;
+    }
+    
+    /* CENTER DETAILS CONTAINERS */
+    .details-container {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+@media (max-width: 768px) {
+  .section__text {
+    min-width: auto;
+  }
+}
+
+/* Additional fix for very small screens */
+@media screen and (max-width: 400px) {
+    .section__pic-container{
+        width: 40vw;
+        height: 40vw;
+        min-width: 180px;
+        min-height: 180px;
+        border: 1.5px solid rgb(64, 64, 64);
+    }
+    
+    /* FORCE CENTER EVERYTHING */
+    * {
+        text-align: center !important;
+    }
+    
+    section {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
     }
 }

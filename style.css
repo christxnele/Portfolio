@@ -49,13 +49,13 @@ nav {
 a {
   color: black;
   text-decoration: none;
-  text-decoration-color: white;
+  /*text-decoration-color: white;*/
 }
 
 a:hover {
   color: #8f9779;
   text-decoration: underline;
-  text-underline-offset: 1rem;
+  text-underline-offset: 0.75rem;
   text-decoration-color: #738276;
 }
 
@@ -176,11 +176,16 @@ section {
   height: 400px;
   width: 400px;
   margin: auto 0;
+  border: black 3.75px solid;
+  border-color: rgb(64, 64, 64);
+ /* border-color: rgb(140, 163, 133);*/
+  border-radius: 100%;
 }
 
 .section__text {
   align-self: center;
   text-align: center;
+  width: 440px;
 }
 
 .section__text p {
@@ -191,8 +196,10 @@ section {
   text-align: center;
 }
 .section__text__p2 {
+  display: inline-block;
   font-size: 1.75rem;
   margin-bottom: 1rem;
+  white-space: nowrap;
 }
 
 .title {
@@ -269,22 +276,11 @@ section {
 }
 
 .btn-pushable--green:hover {
-  background: rgb(116, 138, 109);
+  background: ç;
   box-shadow: rgb(116, 138, 109) 0px 4px 1px;
   border-bottom: 3px solid rgb(91, 120, 83);
 }
 
-.btn-pushable--cream {
-  background: rgb(140, 163, 133);
-  box-shadow: rgb(140, 163, 133) 0px 6px 0px;
-  border-bottom: 3px solid rgb(101, 133, 92);
-}
-
-.btn-pushable--cream:hover {
-  background: rgb(116, 138, 109);
-  box-shadow: rgb(116, 138, 109) 0px 4px 1px;
-  border-bottom: 3px solid rgb(91, 120, 83);
-}
 
 .btn-container {
   display: flex;
@@ -369,7 +365,7 @@ section {
   padding: 1.5rem;
   flex: 1;
   background: white;
-  background-color: rgb(245, 237, 229);
+  background-color: rgb(250, 242, 235);
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.2rem solid;
   border-color: rgb(116, 138, 109);
@@ -389,6 +385,13 @@ section {
   height: 400px;
   width: 400px;
   margin: auto 0;
+}
+
+.education-icon:hover{
+  cursor: default;
+  scale: none;
+  transform: none;
+  transition: none;
 }
 
 /* EXPERIENCE SECTION */
@@ -430,6 +433,13 @@ article .icon {
   cursor: default;
 }
 
+.experience-icon:hover{
+  cursor: default;
+  scale: none;
+  transform: none;
+  transition: none;
+}
+
 /* PROJECTS */
 
 #projects {
@@ -438,7 +448,12 @@ article .icon {
 
 .color-container {
   border-color: rgb(116, 138, 109);
-  background: rgb(245, 237, 229);
+  background: rgb(250, 242, 235);
+}
+
+.color-container:hover{
+  transform: scale(1.01);
+  transition: ease 0.3s all;
 }
 
 .project-img {
@@ -472,7 +487,7 @@ article .icon {
     border-radius: 2rem;
     border: rgb(53, 53, 53) 0.2rem solid;
     border-color: rgb(163, 163, 163);
-    background: rgb(250, 250, 250);
+    background: rgb(250, 242, 235);
     margin: 2rem auto;
     padding: 0.5rem;
 }
@@ -512,4 +527,26 @@ footer {
 
 footer p {
     text-align: center;
+}
+
+/* TYPING ANIMATION */
+
+#typing{
+  padding-right: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blink 0.7s step-end infinite;
+  display: inline-block;
+  text-align: center;
+}
+
+#typing::after {
+  content: "  ☆";
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
