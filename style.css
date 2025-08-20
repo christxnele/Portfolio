@@ -389,6 +389,12 @@ section {
 .details-container h2 {
   margin-bottom: 1rem;
 }
+
+.text-container p {
+  text-align: center;
+  font-size: 1.25rem;
+}
+
 .section-container {
   gap: 4rem;
   height: 80%;
