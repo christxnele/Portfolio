@@ -351,6 +351,7 @@ section {
   gap: 2rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
+  justify-content: center;
 }
 
 .about-details-container {
@@ -385,6 +386,8 @@ section {
   text-align: center;
 
 }
+
+
 
 .details-container h2 {
   margin-bottom: 1rem;
@@ -486,6 +489,56 @@ article .icon {
   color: black;
 }
 
+#projects .details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  background-color: rgb(250, 242, 235);
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.2rem solid;
+  border-color: rgb(116, 138, 109);
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+/* AI SUGGESTIONS */
+#projects .details-container .btn-container {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+/* tech stack container */
+.tech-stack-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  
+}
+
+/* Tech Stack Tags */
+.tech-tag {
+  background-color: rgb(116, 138, 109);
+  color: rgb(255, 244, 233);
+  padding: 0.4rem 0.8rem;
+  border-radius: 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  font-family: "Roboto Mono", monospace;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.tech-tag:hover {
+  background-color: rgb(101, 133, 92);
+  transform: scale(1.05);
+}
 /*
 .project-btn {
     color: black;
