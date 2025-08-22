@@ -1,3 +1,4 @@
+
 @media screen and (max-width: 1400px) {
     #profile {
         height: 83vh;
@@ -7,6 +8,7 @@
     .about-containers{
         flex-wrap: wrap;
     }
+    
 }
 
 @media screen and (max-width: 1200px) {
